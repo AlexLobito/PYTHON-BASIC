@@ -10,4 +10,16 @@ from typing import List
 
 
 def calculate_power_with_difference(ints: List[int]) -> List[int]:
-    ...
+    ListResult=[]
+    
+    lastsquareelem=0
+    for elem in ints :
+        elem2List=elem**2 - (lastsquareelem**2 - lastsquareelem)
+        lastsquareelem=elem
+        ListResult.append(elem2List)
+        print(elem2List)
+        
+    return ListResult
+
+
+calculate_power_with_difference([1, 2, 3])
