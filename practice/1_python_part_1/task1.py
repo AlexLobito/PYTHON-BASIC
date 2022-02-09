@@ -19,7 +19,7 @@ def delete_from_list(list_to_clean: List, item_to_delete: Any) -> List:
 
   i=0
   for i in range(howmany) :
-    position=list_to_clean.index=(item_to_delete)
+    position=list_to_clean.index(item_to_delete)
     list_to_clean.pop(position)
   print(list_to_clean)
 
