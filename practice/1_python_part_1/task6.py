@@ -20,5 +20,28 @@ from typing import Tuple
 
 
 def get_min_max(filename: str) -> Tuple[int, int]:
-    ...
+    File2Read = open (filename, "r")
+    
+    iLine=0
+    min=0
+    max=0
+    
+    for Linea2Read in File2Read :
+        FileLine=Line2Read.rstrip()
+        
+        if (iLine == 0) :
+            min=FileLine
+            max=FileLine
+        else :
+            if (FileLine > max) :
+                max=FileLine
+            if (FileLine < min) :
+                min=FileLine
+                
+        iLine=iLine + 1
+    print(min, max)
+    File2Read.close()
+    
+    return min, max
 
+get_min_max('somefile.txt')
