@@ -24,7 +24,6 @@ def get_min_max(filename: str) -> Tuple[int, int]:
     
     StrFile=File2Read.read()
     ListFile = list( filter(None, list(StrFile.split("\n")) ) )
-    print(ListFile)
     minF=min(ListFile)
     maxF=max(ListFile)
     
