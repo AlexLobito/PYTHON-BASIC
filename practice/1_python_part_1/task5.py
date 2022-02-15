@@ -10,9 +10,14 @@ Examples:
     >>> remove_duplicated_words('1 2 3')
     '1 2 3'
 """
-
-
 def remove_duplicated_words(line: str) -> str:
+    used=set()
+    List=line.split(" ")
+    uniqueList = [x for x in List if x not in used and (used.add(x) or True)]
+    print(list(uniqueList))
+    
+
+def remove_duplicated_words2(line: str) -> str:
     tempList=[]
     
     data=line.split(" ")
