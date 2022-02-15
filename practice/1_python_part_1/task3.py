@@ -16,4 +16,19 @@ from typing import Iterable
 
 
 def build_from_unique_words(*lines: Iterable[str], word_number: int) -> str:
-    ...
+    flag=0
+    
+    for y in lines :
+        if (len(y) < word_number) :
+            flag=1
+            
+    if (flag == 0) :
+        for iLine in lines :
+            used=set()
+            iList=iLine.split(" ")
+            uniqueList = [x for x in iList if x not in used and (used.add(x) or True)]
+            
+            print(uniqueList[word_number], end=" ")
+        print("")
+        
+build_from_unique_words('a b c', '1 1 1 2 3', 'cat dog milk', word_number=1)
